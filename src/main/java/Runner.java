@@ -1,9 +1,12 @@
 import entity.Song;
 
 public class Runner {
-    Song asd = new Song();
+    public static void main(String[] args) {
+        Song asd = new Song();
+        asd.setAlbum("Tree");
+        System.out.println(asd.getAlbum());
 
-    public void setAsd(Song asd) {
-        this.asd.setAlbum();
-    }
+
+     }
+
 }

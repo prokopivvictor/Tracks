@@ -3,14 +3,6 @@ package entity;
 public class Song extends Track {
     private String title;
     private String band;
-
-    /*public Song(String title, String band, String album, Integer year) {
-        this.title = title;
-        this.band = band;
-        this.album = album;
-        this.year = year;
-    }*/
-
     private String album;
     private Integer year;
 
