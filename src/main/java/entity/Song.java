@@ -1,10 +1,5 @@
 package entity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-
 public class Song extends Track {
     private String title;
     private String band;
@@ -43,9 +38,12 @@ public class Song extends Track {
         this.band = band;
     }
 
-    //public String getBandName(List<String> bandStorage,int i){
-    //    return bandsStorage.toArray()[i].toString();
-   // }
+    public Song(String title, String band, String album, Integer year) {
+        this.title = title;
+        this.band = band;
+        this.album = album;
+        this.year = year;
+    }
 }
 
 
