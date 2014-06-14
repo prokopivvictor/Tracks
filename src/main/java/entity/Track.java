@@ -2,7 +2,7 @@ package entity;
 
 public abstract class Track {
     private String file_name;
-    private Integer duration;
+    private Double duration;
     private Double file_size;
 
     public String getFile_name() {
@@ -13,11 +13,11 @@ public abstract class Track {
         this.file_name = file_name;
     }
 
-    public Integer getDuration() {
+    public Double getDuration() {
         return duration;
     }
 
-    public void setDuration(Integer duration) {
+    public void setDuration(Double duration) {
         this.duration = duration;
     }
 
