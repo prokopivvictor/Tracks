@@ -1,4 +1,4 @@
-package entity;
+package com.epam.vp.entity;
 
 public class Lecture extends Track {
     private String author;
@@ -37,4 +37,6 @@ public class Lecture extends Track {
     public void setTitle(String title) {
         this.title = title;
     }
+
+
 }

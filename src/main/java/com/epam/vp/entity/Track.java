@@ -1,4 +1,4 @@
-package entity;
+package com.epam.vp.entity;
 
 public abstract class Track {
     private String file_name;

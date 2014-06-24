@@ -1,4 +1,4 @@
-package entity;
+package com.epam.vp.entity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
