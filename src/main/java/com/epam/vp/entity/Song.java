@@ -1,7 +1,5 @@
 package com.epam.vp.entity;
 
-import java.util.ArrayList;
-
 public class Song extends Track {
     private String title;
     private String band;
@@ -13,6 +11,9 @@ public class Song extends Track {
         band = builder.band;
         album = builder.album;
         year = builder.year;
+        setDuration(builder.duration);
+        setFile_size(builder.file_size);
+
     }
 
     public String getTitle() {
@@ -48,25 +49,12 @@ public class Song extends Track {
     }
 
     public static class Builder {
-        private String title;
-        private String band;
-        private String album;
-        private Integer year;
-
-        public Builder(String title, String band) {
-            this.title = title;
-            this.band = band;
-        }
-
-        public Builder album(String value) {
-            album = value;
-            return this;
-        }
-
-        public Builder year(Integer value) {
-            year = value;
-            return this;
-        }
+        private String title = DataStorage.getRandomValue(DataStorage.getTitlesStorage());
+        private String band = DataStorage.getRandomValue(DataStorage.getBandsStorage());
+        private String album = DataStorage.getRandomValue(DataStorage.getAlbumsStorage());
+        private Integer year = 2000 + (int) (Math.random() * ((2014 - 2000) + 1));
+        private Double duration = 2 + (Math.random() * ((5 - 2) + 1));
+        private Double file_size = 10 + (Math.random() * ((10 - 5) + 1));
 
         public Song build() {
             return new Song(this);

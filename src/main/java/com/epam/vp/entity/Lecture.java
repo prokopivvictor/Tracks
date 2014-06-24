@@ -11,6 +11,8 @@ public class Lecture extends Track {
         reader = builder.reader;
         topic = builder.topic;
         title = builder.title;
+        setDuration(builder.duration);
+        setFile_size(builder.file_size);
     }
 
     public String getAuthor() {
@@ -46,25 +48,12 @@ public class Lecture extends Track {
     }
 
     public static class Builder {
-        private String author;
+        private String author = DataStorage.getRandomValue(DataStorage.getLectureAuthorStorage());
+        private String topic = DataStorage.getRandomValue(DataStorage.getLectureTopicStorage());
+        private Double duration = 2 + (Math.random() * ((5 - 2) + 1));
+        private Double file_size = 10 + (Math.random() * ((10 - 5) + 1));
         private String reader;
-        private String topic;
         private String title;
-
-        public Builder(String author, String topic) {
-            this.author = author;
-            this.topic = topic;
-        }
-
-        public Builder reader(String value) {
-            reader = value;
-            return this;
-        }
-
-        public Builder title(String value) {
-            title = value;
-            return this;
-        }
 
         public Lecture build() {
             return new Lecture(this);
