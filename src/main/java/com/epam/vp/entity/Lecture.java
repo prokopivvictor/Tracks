@@ -6,6 +6,13 @@ public class Lecture extends Track {
     private String topic;
     private String title;
 
+    private Lecture(Builder builder) {
+        author = builder.author;
+        reader = builder.reader;
+        topic = builder.topic;
+        title = builder.title;
+    }
+
     public String getAuthor() {
         return author;
     }
@@ -38,5 +45,30 @@ public class Lecture extends Track {
         this.title = title;
     }
 
+    public static class Builder {
+        private String author;
+        private String reader;
+        private String topic;
+        private String title;
+
+        public Builder(String author, String topic) {
+            this.author = author;
+            this.topic = topic;
+        }
+
+        public Builder reader(String value) {
+            reader = value;
+            return this;
+        }
+
+        public Builder title(String value) {
+            title = value;
+            return this;
+        }
+
+        public Lecture build() {
+            return new Lecture(this);
+        }
+    }
 
 }
