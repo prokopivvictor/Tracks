@@ -15,6 +15,16 @@ public class DataStorage {
             "Three Women", "Lazaretto", "Temporary Ground", "Would You Fight For My Love?", "High Ball Stepper", "Just One Drink", "Alone In My Home", "Alone In My Home", "Alone In My Home",
             "Entitlement", "That Black Bat Licorice", "I Think I Found The Culprit", "Want And Able", "60 Feet Tall", "Hang You from the Heavens", "I Cut Like a Buffalo", "So Far from Your Weapon",
             "Treat Me Like Your Mother", "Rocking Horse", "New Pony", "Bone House", "3 Birds [Instrumental]", "No Hassle Night", "Will There Be Enough Water?"));
+    private static List<String> lectureTopicStorage = new ArrayList<String>(Arrays.asList("C++", "Java", ".NET"));
+    private static List<String> lectureAuthorStorage = new ArrayList<String>(Arrays.asList("Blinov", "Romanchik", "Bloch"));
+
+    public static List<String> getLectureTopicStorage() {
+        return lectureTopicStorage;
+    }
+
+    public static List<String> getLectureAuthorStorage() {
+        return lectureAuthorStorage;
+    }
 
     public static List<String> getBandsStorage() {
         return bandsStorage;
