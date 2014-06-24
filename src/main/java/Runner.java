@@ -14,6 +14,6 @@ public class Runner {
         Song asd = new Song.Builder(DataStorage.getRandomValue(DataStorage.getTitlesStorage()), DataStorage.getRandomValue(DataStorage.getBandsStorage())).build();
         logger.info(String.format("%s - %s", asd.getBand(), asd.getTitle()));
         Lecture dsa = new Lecture.Builder("TBalashow","Java").build();
-        logger.info(String.format("%s - %s", dsa.getAuthor(), dsa.getTopic()));
+
     }
 }
